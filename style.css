@@ -1,0 +1,187 @@
+.face{
+    background-color:chartreuse;
+    height: 110px;
+    width: 110px;
+    margin: auto;
+    border-radius: 50px 50px 0 0;
+}
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 190px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.lhand,.rhand{
+    height: 75px;
+    width: 23px;
+    background-color:chartreuse;
+    border-radius: 40px;
+}
+.stomach{
+    height: 110px;
+    width: 110px;
+    background-color:chartreuse;
+    border-radius:0 0 50px 50px;
+
+}
+.leye,.reye{
+     height: 15px;
+     width: 15px;
+     border-radius: 50%;
+     background-color:black;
+
+}
+.eyes{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
+
+.legs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 110px;
+    margin: auto;
+    margin-top: -10px;
+
+}
+
+.lleg,.rleg{
+    height:65px;
+    width: 25px;
+    background-color:chartreuse;
+    border-radius: 20px;
+}
+.main{
+    background-color: black;
+    height:500px;
+    width:600px;
+    margin: auto;
+    padding-top: 20px;
+}
+.main:hover .face{
+transition: width 1s ease-out;
+transform: scale(0.8);
+animation: moveface 1s 0.1s infinite;
+}
+@keyframes moveface{
+    0%{
+        transform: scale(0.8);
+    }
+    25%{
+        width: 120px;
+        height: 120px;
+    }
+
+}
+.main:hover .body1{
+    transition: width 1s ease-in;
+    transform: scale(0.8);
+    animation: movebody1 1s 0.1s infinite;
+    }
+    @keyframes movebody1{
+        0%{
+            transform: scale(1);
+        }
+        25%{
+            width: 200px;
+        }
+    
+    }
+.main:hover{
+    animation: movemain 1s 0.1s infinite;
+
+}
+@keyframes movemain{
+    0%{
+        background-color: rgb(214, 23, 173);
+    }
+    25%{
+        background-color: rgb(220, 152, 17);
+    }
+    50%{
+        background-color: rgb(25, 142, 215);
+    }
+    75%{
+        background-color:darkmagenta;
+    }
+}
+.main:hover .lhand{
+    transform:rotate(45deg);
+    animation: movelhand 1s 0.1s infinite;
+    transform-origin: top;
+    transition: 1s ease-in-out;
+}
+@keyframes movelhand{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(45deg); 
+    }
+    75%{
+        transform: rotate(25deg); 
+    }
+}
+.main:hover .rhand{
+    transform:rotate(45deg);
+    animation: moverhand 1s 0.1s infinite;
+    transform-origin: top;
+    transition: 1s ease-in-out;
+}
+
+@keyframes moverhand{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(45deg); 
+    }
+    75%{
+        transform: rotate(25deg); 
+    }
+}
+.main:hover .lleg{
+    transform:rotate(45deg);
+    animation: movelleg 1s 0.1s infinite;
+    transform-origin: top;
+    transition: 1s ease-in-out;
+}
+
+@keyframes movelleg{
+    0%{
+        transform: rotate(-35deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    
+}
+.main:hover .rleg{
+    transform:rotate(45deg);
+    animation: moverleg 1s 0.1s infinite;
+    transform-origin: top;
+    transition: 1s ease-in-out;
+}
+
+@keyframes moverleg{
+    0%{
+        transform: rotate(-35deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    
+}
